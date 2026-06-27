@@ -82,7 +82,7 @@ function updateUI() {
         transactionList.appendChild(li);
     });
 
-    totalBalanceEl.innerText = `$${total.toFixed(2)}`;
+    totalBalanceEl.innerText = `$Rp{total.toFixed(2)}`;
 
     // --- OPTIONAL CHALLENGE 3: Highlight Over Limit ---
     // Kalau pengeluaran lebih dari $100, warnanya jadi merah
