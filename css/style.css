@@ -1,1 +1,132 @@
+:root {
+    /* Palet Earth Tones */
+    --bg-color: #F4F1EA;
+    --text-color: #3E362E;
+    --primary-color: #8C7A6B;
+    --card-bg: #FFFFFF;
+    --border-color: #E2DCD3;
+    --danger-color: #D96C6C;
+}
 
+body.dark-mode {
+    --bg-color: #2A241F;
+    --text-color: #F4F1EA;
+    --primary-color: #A39182;
+    --card-bg: #362F29;
+    --border-color: #4A4036;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.balance-container h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+/* Biar limit pengeluaran yang berlebih jadi warna merah */
+.over-limit {
+    color: var(--danger-color) !important;
+}
+
+section {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+h3 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 600px) {
+    .bottom-section {
+        flex-direction: row;
+    }
+    .transaction-section, .chart-section {
+        flex: 1;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.delete-btn {
+    background-color: var(--danger-color);
+    padding: 6px 12px;
+    margin-top: 0;
+}
